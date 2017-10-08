@@ -19,6 +19,10 @@ const (
 	cl    = "\xF0\x9F\x86\x91"
 	c     = "\xC2\xA9"
 	r     = "\xC2\xAE"
+	i     = "\xE2\x84\xB9"
+	x     = "\xE2\x9D\x8C"
+	qmark = "\xE2\x9D\x93"
+	emark = "\xE2\x9D\x97"
 	one   = "\x31\xE2\x83\xA3"
 	two   = "\x32\xE2\x83\xA3"
 	three = "\x33\xE2\x83\xA3"
@@ -29,6 +33,8 @@ const (
 	eight = "\x38\xE2\x83\xA3"
 	nine  = "\x39\xE2\x83\xA3"
 	zero  = "\x30\xE2\x83\xA3"
+	dexcl = "\xE2\x80\xBC"
+	exclq = "\xE2\x81\x89"
 	suh   = "suh my ni\xF0\x9F\x85\xB1\xF0\x9F\x85\xB1a"
 )
 
@@ -115,6 +121,12 @@ func setupReplacer() {
 		"O", o,
 		"P", p,
 		"R", r,
+		"I", i,
+		"X", x,
+		"!?", exclq,
+		"!!", dexcl,
+		"?", qmark,
+		"!", emark,
 		"1", one,
 		"2", two,
 		"3", three,
