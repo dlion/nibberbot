@@ -11,13 +11,25 @@ import (
 )
 
 const (
-	b   = "\xF0\x9F\x85\xB1"
-	a   = "\xF0\x9F\x85\xB0"
-	o   = "\xF0\x9F\x85\xBE"
-	p   = "\xF0\x9F\x85\xBF"
-	ab  = "\xF0\x9F\x86\x8E"
-	cl  = "\xF0\x9F\x86\x91"
-	suh = "suh my ni\xF0\x9F\x85\xB1\xF0\x9F\x85\xB1a"
+	b     = "\xF0\x9F\x85\xB1"
+	a     = "\xF0\x9F\x85\xB0"
+	o     = "\xF0\x9F\x85\xBE"
+	p     = "\xF0\x9F\x85\xBF"
+	ab    = "\xF0\x9F\x86\x8E"
+	cl    = "\xF0\x9F\x86\x91"
+	c     = "\xC2\xA9"
+	r     = "\xC2\xAE"
+	one   = "\x31\xE2\x83\xA3"
+	two   = "\x32\xE2\x83\xA3"
+	three = "\x33\xE2\x83\xA3"
+	four  = "\x34\xE2\x83\xA3"
+	five  = "\x35\xE2\x83\xA3"
+	six   = "\x36\xE2\x83\xA3"
+	seven = "\x37\xE2\x83\xA3"
+	eight = "\x38\xE2\x83\xA3"
+	nine  = "\x39\xE2\x83\xA3"
+	zero  = "\x30\xE2\x83\xA3"
+	suh   = "suh my ni\xF0\x9F\x85\xB1\xF0\x9F\x85\xB1a"
 )
 
 var (
@@ -97,10 +109,22 @@ func setupReplacer() {
 		"AB", ab,
 		"CL", cl,
 		"A", a,
+		"C", c,
 		"G", b,
 		"B", b,
 		"O", o,
 		"P", p,
+		"R", r,
+		"1", one,
+		"2", two,
+		"3", three,
+		"4", four,
+		"5", five,
+		"6", six,
+		"7", seven,
+		"8", eight,
+		"9", nine,
+		"0", zero,
 	)
 }
 
