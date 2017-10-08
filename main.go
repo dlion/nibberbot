@@ -46,6 +46,7 @@ var (
 	keyPath  string
 	debug    bool
 	domain   string
+	port     string
 )
 
 func main() {
@@ -65,13 +66,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	_, err = bot.SetWebhook(tgbotapi.NewWebhook("https://" + domain + ":8443/" + apiKey))
+	_, err = bot.SetWebhook(tgbotapi.NewWebhook("https://" + domain + ":" + port + "/" + apiKey))
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	updates := bot.ListenForWebhook("/" + apiKey)
-	go http.ListenAndServeTLS("0.0.0.0:8443", certPath, keyPath, nil)
+	go http.ListenAndServeTLS("0.0.0.0:"+port, certPath, keyPath, nil)
 	for update := range updates {
 		if update.InlineQuery != nil {
 			log.Printf("[INLINE] new query sent in by %s -> %s\n", update.InlineQuery.From.UserName, update.InlineQuery.Query)
@@ -147,6 +148,7 @@ func setupParams() {
 	flag.StringVar(&keyPath, "key", "", "required, TLS key path")
 	flag.StringVar(&apiKey, "apikey", "", "required, Telegram bot API key")
 	flag.StringVar(&domain, "domain", "", "required, domain associated to the TLS cert+key and the server where this bot will be running")
+	flag.StringVar(&port, "port", "88", "port to run on, must be 443, 80, 88, 8443 - defaults to 88")
 	flag.BoolVar(&debug, "debug", false, "debug Telegram bot interactions")
 	flag.Parse()
 
