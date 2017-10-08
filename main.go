@@ -117,6 +117,8 @@ func setupReplacer() {
 	replacer = *strings.NewReplacer(
 		"AB", ab,
 		"CL", cl,
+		"NGUL", ngul,
+		"ALLAH", terr,
 		"A", a,
 		"C", c,
 		"G", b,
@@ -127,8 +129,6 @@ func setupReplacer() {
 		"I", i,
 		"X", x,
 		"DOCKER", docker,
-		"NGUL", ngul,
-		"ALLAH", terr,
 		"!?", exclq,
 		"!!", dexcl,
 		"?", qmark,
