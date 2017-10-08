@@ -36,6 +36,8 @@ const (
 	zero   = "\x30\xE2\x83\xA3"
 	dexcl  = "\xE2\x80\xBC"
 	exclq  = "\xE2\x81\x89"
+	terr   = "\xF0\x9F\x91\xB3 \xF0\x9F\x92\xA3"
+	ngul   = "\xF0\x9F\x86\x96 \xF0\x9F\x86\x92"
 	suh    = "suh my ni\xF0\x9F\x85\xB1\xF0\x9F\x85\xB1a"
 )
 
@@ -116,6 +118,8 @@ func setupReplacer() {
 	replacer = *strings.NewReplacer(
 		"AB", ab,
 		"CL", cl,
+		"NGUL", ngul,
+		"ALLAH", terr,
 		"A", a,
 		"C", c,
 		"G", b,
