@@ -128,7 +128,6 @@ func setupReplacer() {
 		"X", x,
 		"DOCKER", docker,
 		"NGUL", ngul,
-		"SUH", suh,
 		"ALLAH", terr,
 		"!?", exclq,
 		"!!", dexcl,
