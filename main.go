@@ -152,7 +152,7 @@ func setupParams() {
 	flag.StringVar(&keyPath, "key", "", "required, TLS key path")
 	flag.StringVar(&apiKey, "apikey", "", "required, Telegram bot API key")
 	flag.StringVar(&domain, "domain", "", "required, domain associated to the TLS cert+key and the server where this bot will be running")
-	flag.StringVar(&port, "port", "88", "port to run on, must be 443, 80, 88, 8443 - defaults to 88")
+	flag.StringVar(&port, "port", "88", "port to run on, must be 443, 80, 88, 8443")
 	flag.BoolVar(&debug, "debug", false, "debug Telegram bot interactions")
 	flag.Parse()
 
