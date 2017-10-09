@@ -40,6 +40,7 @@ const (
 	ngul   = "\xF0\x9F\x86\x96 \xF0\x9F\x86\x92"
 	suh    = "suh my ni\xF0\x9F\x85\xB1\xF0\x9F\x85\xB1a"
 	sos    = "\xF0\x9F\x86\x98"
+	ok     = "\xF0\x9F\x86\x97"
 )
 
 var (
@@ -122,6 +123,7 @@ func setupReplacer() {
 		"CL", cl,
 		"NGUL", ngul,
 		"ALLAH", terr,
+		"OK", ok,
 		"A", a,
 		"C", c,
 		"G", b,
