@@ -31,6 +31,7 @@ Letsencrypt users must provide `fullchain.pem` as `cert`.
 To add more emojis, one should:
 
  1. add the emoji UTF-8 hex representation to the `const` declaration at line 13
+ 	- You can get the hex [here](https://apps.timwhitlock.info/emoji/tables/unicode)
  2. in the `setupReplacer` function, add a conversion tuple {expression to transform in emoji, emoji hex variable}
 
 For example, if one want to add the '🅱️' emoji:
