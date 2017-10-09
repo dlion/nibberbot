@@ -117,6 +117,7 @@ func setupReplacer() {
 	//
 	// Will rewrite this shitty thingy later.
 	replacer = *strings.NewReplacer(
+		"SOS", sos,
 		"AB", ab,
 		"CL", cl,
 		"NGUL", ngul,
