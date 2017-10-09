@@ -1,6 +1,9 @@
 package nibber
 
-import "sort"
+import (
+	"sort"
+	"strings"
+)
 
 type Substitution struct {
 	Origin      string
@@ -26,7 +29,7 @@ func (os *OrderedSubstitution) Order() {
 	sort.Sort(os)
 }
 
-func (os OrderedSubstitution) ToReplacerArray() []string {
+func (os OrderedSubstitution) toReplacerArray() []string {
 	res := []string{}
 	for _, elem := range os {
 		res = append(res, elem.Origin, elem.Destination)
@@ -34,11 +37,11 @@ func (os OrderedSubstitution) ToReplacerArray() []string {
 	return res
 }
 
-func MapToOrderedSubstitution(m map[string]string) OrderedSubstitution {
+func mapToOrderedSubstitution(m map[string]string) OrderedSubstitution {
 	var os OrderedSubstitution
 
 	for key, value := range m {
-		os = append(os, Substitution{key, value})
+		os = append(os, Substitution{strings.ToUpper(key), value})
 	}
 
 	return os

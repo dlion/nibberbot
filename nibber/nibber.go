@@ -8,15 +8,15 @@ type Nibber struct {
 }
 
 func NewNibber(subsMap map[string]string) Nibber {
-	subs := MapToOrderedSubstitution(subsMap)
+	subs := mapToOrderedSubstitution(subsMap)
 	subs.Order()
 
 	return Nibber{
 		substitutions: subs,
-		replacer:      *strings.NewReplacer(subs.ToReplacerArray()...),
+		replacer:      *strings.NewReplacer(subs.toReplacerArray()...),
 	}
 }
 
 func (n Nibber) Nibbering(str string) string {
-	return n.replacer.Replace(str)
+	return n.replacer.Replace(strings.ToUpper(str))
 }
