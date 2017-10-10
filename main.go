@@ -50,7 +50,7 @@ func main() {
 	}
 
 	updates := bot.ListenForWebhook("/" + apiKey)
-	go http.ListenAndServeTLS("0.0.0.0:"+port, certPath, keyPath, nil)
+	go startServer()
 	for update := range updates {
 		if update.InlineQuery != nil {
 			log.Printf("[INLINE] new query sent in by %s -> %s\n", update.InlineQuery.From.UserName, update.InlineQuery.Query)
@@ -106,4 +106,8 @@ func setupParams() {
 		flag.Usage()
 		os.Exit(1)
 	}
+}
+
+func startServer() {
+	go log.Fatal(http.ListenAndServeTLS("0.0.0.0:"+port, certPath, keyPath, nil))
 }
