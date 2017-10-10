@@ -42,4 +42,5 @@ var Emojis = map[string]string{
 	"dio":	   "\xF0\x9F\x90\x96",
 	"v":	   "\xE2\x99\x88",
 	"h":	   "\xE2\x99\x93",
+	"t":       "\xF0\x9F\x95\x87",
 }
