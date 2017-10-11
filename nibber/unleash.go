@@ -3,6 +3,11 @@ package nibber
 // List of the string -> emoji associations.
 //
 // Just add another tuple and OrderedSubstitution will make it available.
+
+const (
+	Clap = "\xF0\x9F\x91\x8F"
+)
+
 var Emojis = map[string]string{
 	"\xE2\x83\xA3": "",
 	"b":            "\xF0\x9F\x85\xB1",
