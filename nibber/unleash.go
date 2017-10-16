@@ -59,4 +59,5 @@ var Emojis = map[string]string{
 	"peroni":  "\xF0\x9F\x8D\xBA",
 	"2peroni": "\xF0\x9F\x8D\xBB",
 	"sos":     "\xF0\x9F\x86\x98",
+	"snek":    "\xF0\x9F\x90\x8D",
 }
